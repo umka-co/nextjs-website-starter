@@ -1,0 +1,1 @@
+Assets and raw materials. Content of ths folder will not be included in the final build.

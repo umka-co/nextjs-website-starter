@@ -1,0 +1,111 @@
+.footer {
+  background-color: #ffffff;
+  background-color: rgba(255, 248, 242, 0.95);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.footer.mobile {
+  align-items: stretch;
+  flex-direction: column;
+  padding: 2rem 0.5rem;
+}
+
+.footer.desktop {
+  flex-direction: row;
+  padding: 2rem 0;
+}
+
+.footer.desktop a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo .text {
+  font-size: 0.75rem;
+  padding: 0 0.25rem;
+  text-align: center;
+}
+
+.content {
+  align-items: center;
+  /* Same as .dark */
+  color: rgb(28, 14, 13);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mobile .content {
+  align-items: stretch;
+  padding: 2rem 0;
+}
+
+.menu,
+.copyright {
+  align-items: center;
+  display: flex;
+}
+
+.mobile .menu a {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.mobile .menu {
+  flex-direction: column;
+  /* font-size: 2rem; */
+}
+
+.desktop .menu {
+  flex-direction: row;
+}
+
+.menu a {
+  white-space: nowrap;
+}
+
+.desktop .menu a {
+  padding: 0.125rem 0.25rem;
+}
+
+.desktop .menu a:focus-visible,
+.desktop .menu a:hover {
+  color: rgb(255, 85, 62);
+  /* transition: 0.3s all; */
+}
+
+.copyright {
+  padding-top: 0.5rem;
+}
+
+.social {
+  flex-shrink: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mobile .social {
+  justify-content: center;
+}
+
+.desktop .social {
+  justify-content: flex-end;
+}

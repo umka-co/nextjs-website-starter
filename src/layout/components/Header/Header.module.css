@@ -1,0 +1,159 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 64;
+}
+
+.header {
+  align-items: center;
+  background-color: rgba(255, 248, 242, 0.95);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: row;
+  height: 6rem; /* 96px; */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header.mobile {
+  position: relative;
+  transition: 0.5s height;
+  /* Move it over Mobile Menu */
+  z-index: 63;
+}
+
+.header.desktop {
+  max-width: 1200px;
+  transition: 1s height;
+}
+
+.header.desktop.big {
+  /* Full-size Header on Desktop */
+  height: 12rem; /* 192px; */
+}
+
+.header.desktop.small {
+  /* Shrinked Header after scrolling on Desktop */
+  height: 6rem; /* 96px; */
+}
+
+/* "Static" Menu on Desktop */
+.menu.desktop ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 4rem;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 1rem;
+}
+
+.menu.desktop a {
+  font-size: 1.2rem;
+  /* padding: 1rem 0.5rem; */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.menu.desktop a:hover {
+  color: rgb(255, 85, 62);
+  transition: 0.3s color;
+  text-decoration: none;
+}
+
+/* "Vertically sliding" Menu on Mobile */
+.menu.mobile {
+  /* Const to set starting position of the Menu */
+  --menu-starting-top: -50vh;
+  /* background-color: rgba(255, 255, 255, 0.95); */
+  background-color: rgba(255, 248, 242, 0.95);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: max-content;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  padding: 2rem 0;
+  /* Starting point outside the screen, the transition will change it */
+  top: var(--menu-starting-top);
+  width: 100%;
+  /* z-index: 62; Not needed */
+}
+
+.menu.mobile.open {
+  /* Position of visible menu */
+  top: 6rem; /* 96px; */
+  transition: 0.5s top;
+  visibility: visible;
+}
+
+.menu.mobile.close {
+  /* Position of hidden menu */
+  top: var(--menu-starting-top);
+  transition:
+    0.5s top,
+    0.5s visibility;
+  visibility: hidden;
+}
+
+.menu.mobile ul {
+  align-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  /* Make clickable area bigger */
+  /* max-width: 30rem; */
+  text-align: center;
+  width: 100%;
+}
+
+/* Single Menu Link */
+.menu.mobile li {
+  padding: 0.35rem;
+  text-align: center;
+  /* Prevents line break */
+  white-space: nowrap;
+  /* Make clickable area bigger */
+  width: 100%;
+}
+
+.menu.mobile a {
+  display: block;
+  font-size: 1.5rem;
+  /* Make clickable area bigger */
+  padding: 0.6rem 2rem;
+  text-decoration: none;
+}
+
+/* Other classes, must be defined last */
+.activeLink {
+  /* LOL, there is a bug with class order in React Modules, so we use  !important :) */
+  background-color: rgba(255, 39, 10, 0.1) !important;
+}
+
+.spacer {
+  /* Clickable central area of the Header on Mobile */
+  height: 100%;
+  width: 100%;
+}
+
+.menuToggleButton {
+  /* Humbugger Menu Button */
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+}

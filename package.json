@@ -1,0 +1,54 @@
+{
+  "name": "nextjs-website-starter",
+  "version": "0.1.1",
+  "description": "Some public website using NextJS",
+  "private": true,
+  "author": {
+    "name": "Anton Karpenko",
+    "email": "i@karpolan.com",
+    "url": "https://karpolan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umka-co/nextjs-website-starter.git"
+  },
+  "scripts": {
+    "aws:cloudfront:invalidate": "aws cloudfront create-invalidation --distribution-id _CLOUDFRONT_DISTRIBUTION_NAME_ --paths /* --profile sysadmin",
+    "aws:s3:upload": "aws s3 sync out/ s3://_S3_BUCKET_NAME_ --delete --profile sysadmin",
+    "build": "next build",
+    "dev": "next dev",
+    "deploy:aws": "npm run build && npm run aws:s3:upload && npm run aws:cloudfront:invalidate",
+    "format": "prettier ./ --write",
+    "lint": "next lint",
+    "start": "next start",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
+    "type": "tsc"
+  },
+  "dependencies": {
+    "@amplitude/analytics-browser": "latest",
+    "@emailjs/browser": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "latest",
+    "react-responsive": "latest"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "jest": "latest",
+    "jest-environment-jsdom": "latest",
+    "next-router-mock": "latest",
+    "prettier": "latest",
+    "ts-node": "latest",
+    "typescript": "^5"
+  }
+}

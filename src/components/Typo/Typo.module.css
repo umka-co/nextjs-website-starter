@@ -1,0 +1,156 @@
+/* Modifiers */
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold {
+  font-weight: bold !important;
+  /* font-weight: 700; */
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Colors */
+
+.dark {
+  color: rgb(28, 14, 13);
+}
+
+.light {
+  color: rgb(227, 241, 242);
+}
+
+.primary {
+  color: rgb(255, 85, 62);
+}
+
+.secondary {
+  color: rgb(64, 64, 64);
+}
+
+/* Variants for All Screen */
+
+.list {
+  list-style: disc;
+}
+
+/* Variants for Desktop Screen */
+
+.mobile.header1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mobile.header2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mobile.header3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.mobile.list,
+.mobile.paragraph,
+.mobile.text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+}
+
+.mobile.list,
+.mobile.list li,
+.mobile.paragraph li,
+.mobile.paragraph ul,
+.mobile.paragraph p,
+.mobile.paragraph {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.mobile.paragraph ul,
+.mobile.list {
+  margin-left: 1.5rem;
+}
+
+/* Variants for Desktop Screen */
+
+.desktop.header1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.desktop.header2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.desktop.header3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.desktop.list,
+.desktop.paragraph,
+.desktop.text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+}
+
+.desktop.list,
+.desktop.list li,
+.desktop.paragraph li,
+.desktop.paragraph ul,
+.desktop.paragraph p,
+.desktop.paragraph {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.desktop.paragraph ul,
+.desktop.list {
+  margin-left: 1.5rem;
+}

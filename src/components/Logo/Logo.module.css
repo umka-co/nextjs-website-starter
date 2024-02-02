@@ -1,0 +1,71 @@
+.logo {
+  /* Same as .dark */
+  color: rgb(28, 14, 13);
+  margin: 0.125rem;
+}
+
+.logo:hover {
+  /* Same as .primary */
+  color: rgb(255, 85, 62);
+  text-decoration: none;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.image {
+  display: block;
+  margin: 0.5rem;
+  transition:
+    color 0.3s,
+    all 1s;
+}
+
+.text {
+  transition:
+    color 0.3s,
+    all 1s;
+  white-space: nowrap;
+}
+
+.text .primary {
+  color: rgb(255, 85, 62);
+}
+
+/* Sizes */
+.small.image {
+  height: 64px;
+  width: 64px;
+}
+.small.text {
+  /* Same as .header3 */
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.75rem; /* 157.143% */
+}
+
+.medium.image {
+  height: 96px;
+  width: 96px;
+}
+.text.medium {
+  /* Same as .header3 */
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.75rem; /* 157.143% */
+}
+
+.large.image {
+  width: 128px;
+  height: 128px;
+}
+.large.text {
+  /* Same as .header2 */
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem; /* 133.333% */
+}

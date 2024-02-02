@@ -1,0 +1,21 @@
+{
+  "name": "TODO: Add name of website",
+  "short_name": "TODO: Add short name of website or product",
+  "description": "TODO: Add description of website",
+  "icons": [
+    {
+      "src": "/favicon.ico?v=1",
+      "sizes": "48x48 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    { "src": "/img/favicon/16x16.png?v=1", "sizes": "16x16", "type": "image/png" },
+    { "src": "/img/favicon/32x32.png?v=1", "sizes": "32x32", "type": "image/png" },
+    { "src": "/img/favicon/180x180.png?v=1", "sizes": "180x180", "type": "image/png" },
+    { "src": "/img/favicon/192x192.png?v=1", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/favicon/256x256.png?v=1", "sizes": "256x256", "type": "image/png" }
+  ],
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}
