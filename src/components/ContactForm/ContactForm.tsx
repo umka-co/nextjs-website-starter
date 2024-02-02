@@ -1,12 +1,12 @@
 'use client';
 import { FormEvent, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { envRequired } from '@/utils';
 import { Button } from '@/components';
 import styles from './ContactForm.module.css';
 
 // We need to call it once to initialize emailjs
-emailjs.init(envRequired(process.env.NEXT_PUBLIC_EMAILJS_KEY));
+// emailjs.init(envRequired(process.env.NEXT_PUBLIC_EMAILJS_KEY));
+process.env.NEXT_PUBLIC_EMAILJS_KEY && emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_KEY);
 
 /**
  * Verifies if the email address is valid
@@ -48,7 +48,7 @@ const ContactForm = () => {
     }
 
     try {
-      const result = await emailjs.send('default_service', 'template_software', {
+      const result = await emailjs.send('default_service', 'template_xxx', {
         email,
         message,
       });
