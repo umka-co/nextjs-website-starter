@@ -2,6 +2,7 @@
   /* Same as .dark */
   color: rgb(28, 14, 13);
   margin: 0.125rem;
+  text-decoration: none;
 }
 
 .logo:hover {
