@@ -7,5 +7,5 @@ export const IS_PRODUCTION = getCurrentEnvironment() === 'production'; // Enable
 
 export const PUBLIC_URL = envRequired(process.env.NEXT_PUBLIC_PUBLIC_URL);
 
-export const APP_NAME = 'Some Public Website';
-export const APP_SHORT_NAME = 'Website';
+export const APP_NAME = 'TODO: Add Name';
+export const APP_SHORT_NAME = 'TODO: Add Short Name';

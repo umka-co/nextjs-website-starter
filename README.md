@@ -1,16 +1,17 @@
 # Public Website Template - Built with NextJS
 
-Mix of [Create Next App](https://nextjs.org/docs/pages/api-reference/create-next-app) with set of reusable components and utilities to build professional NextJS application faster.
+Mix of [Create Next App](https://nextjs.org/docs/pages/api-reference/create-next-app) (App Router) with set of reusable components and utilities to build professional SEO friendly websites.
 
 ## How to use
 
 1. Clone the repository
-2. Copy `.env.sample` to `.env` or `.env.local` and fill in the required environment variables
-3. Run `npm i` to install all dependencies
-4. Run `npm run dev` to start the development server
-5. Add your own pages to the `src/app` folder
-6. Run `npm run build` to build the application into `out` folder
-7. Host the content of the `out` folder anywhere you want.
+2. Run `npm i` to install all dependencies
+3. Copy `.env.sample` to `.env` or `.env.local` and fill in the required environment variables
+4. Find all `TODO:` in the code and follow the instructions
+5. Run `npm run dev` to start the development server
+6. Add your own pages to the `src/app` folder
+7. Run `npm run build` to build the application into `out` folder
+8. Host the content of the `out` folder anywhere you want.
 
 ## Available Scripts
 
