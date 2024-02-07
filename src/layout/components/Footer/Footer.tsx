@@ -20,6 +20,8 @@ const Footer = () => {
     [onMobile]
   );
 
+  const copyrightHolder = useMemo(() => <Link href="https://domain-name.com">TODO: Add company name</Link>, []);
+
   return (
     <footer className={className} id="footer">
       <div className={styles.logo}>
@@ -29,7 +31,7 @@ const Footer = () => {
           <span className={styles.text}>
             {APP_NAME}
             <br />
-            by <Link href="https://domain-name.com">TODO: Add company name</Link>
+            by {copyrightHolder}
           </span>
         )}
       </div>
@@ -48,8 +50,7 @@ const Footer = () => {
           // Desktop version of the footer with copyright
           <div className={styles.copyright}>
             <div>
-              Copyright &copy; 2020-{new Date().getFullYear()}{' '}
-              <Link href="https://domain-name.com">TODO: Add company name</Link>
+              Copyright &copy; 2020-{new Date().getFullYear()} {copyrightHolder}
             </div>
           </div>
         )}

@@ -1,4 +1,4 @@
-import { APP_NAME, PUBLIC_URL } from '@/config';
+import { APP_NAME, APP_SHORT_NAME, PUBLIC_URL } from '@/config';
 import { Link, Typo, Wrapper } from '@/components';
 
 /**
@@ -11,9 +11,9 @@ const TermsAndConditionsPage = () => {
       <Typo variant="header1">Terms and Conditions</Typo>
 
       <Typo variant="paragraph">
-        Welcome to the <strong>DOMAIN-NAME.COM</strong> website (&quot;Site&quot;). This Site is a property of{' '}
+        Welcome to the <strong>TODO: DOMAIN-NAME.COM</strong> website (&quot;Site&quot;). This Site is a property of{' '}
         <strong>
-          <Link href="https://other-domain.com">COMPANY OR OWNER</Link>
+          <Link href="https://other-domain.com">TODO: COMPANY OR OWNER</Link>
         </strong>{' '}
         (&quot;Owner&quot;). By accessing the Site, you agree to follow and be bound by the following terms and
         conditions concerning your use of the Site and <Link href="/legal/privacy-policy"> our privacy policy</Link>.
@@ -57,8 +57,9 @@ const TermsAndConditionsPage = () => {
 
       <Typo variant="header2">Trademarks</Typo>
       <Typo variant="paragraph">
-        &quot;{APP_NAME}&quot;, &quot;XXX&quot;, &quot;YYY&quot; are trademarks or registered trademarks of Owner. All
-        other trademarks appearing on the Site are the sole property of their respective owners.
+        &quot;{APP_NAME}&quot;, &quot;{APP_SHORT_NAME}&quot; &quot;TODO: Other trademarks here&quot; are trademarks or
+        registered trademarks of Owner. All other trademarks appearing on the Site are the sole property of their
+        respective owners.
       </Typo>
 
       <Typo variant="header2">Disclaimer</Typo>

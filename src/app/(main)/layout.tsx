@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
   // TODO: put your texts here
   title: APP_NAME, // 'Some Public Website',
-  description: 'Cool description for the website, this is used for SEO, so make it good!',
+  description: 'TODO: Cool description for the website, this is used for SEO, so make it good!',
 };
 
 export const viewport: Viewport = {

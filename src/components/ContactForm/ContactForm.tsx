@@ -48,7 +48,7 @@ const ContactForm = () => {
     }
 
     try {
-      const result = await emailjs.send('default_service', 'template_xxx', {
+      const result = await emailjs.send('default_service', 'TODO: template_xxx', {
         email,
         message,
       });
