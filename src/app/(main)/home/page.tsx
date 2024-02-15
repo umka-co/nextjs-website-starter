@@ -29,7 +29,7 @@ const HomePage = () => {
         </li>
       </Typo>
       <Typo variant="header3">Header 3 Style</Typo>
-      <Typo variant="paragraph">{'Paragraph of text again'.repeat(10)}</Typo>
+      <Typo variant="paragraph">{'Paragraph of text again. '.repeat(10)}</Typo>
 
       <Typo variant="header1">Button</Typo>
       <Stack alignItems="center">
@@ -57,7 +57,7 @@ const HomePage = () => {
         <Picture src="/img/favicon/256x256.png" width={256} height={256} />
       </Stack>
 
-      <Typo variant="paragraph">{'Another paragraph of text'.repeat(10)}</Typo>
+      <Typo variant="paragraph">{'Another paragraph of text. '.repeat(10)}</Typo>
 
       <Typo variant="header1">Video</Typo>
       <Stack alignItems="center" padding="1rem 0">
