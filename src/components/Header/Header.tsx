@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Button } from '@/components';
 import { useIsMobile } from '@/hooks';
 import { IS_BROWSER } from '@/utils/environment';
-import Logo from '../../../components/Logo';
+import Logo from '../Logo';
 import TopMenuContent from './TopMenuContent';
 import styles from './Header.module.css';
 
@@ -20,7 +20,7 @@ const Header = () => {
     (global?.window && window?.scrollY) || (global?.document && document?.documentElement?.scrollTop) > HEIGHT_BIG
   );
   const isMobile = useIsMobile();
-  const onNarrowScreen = useIsMobile(1024);
+  const isNarrowScreen = useIsMobile(1024);
 
   const toggleMenu = useCallback(() => {
     setOpenMenu((oldValue) => !oldValue);
@@ -75,7 +75,7 @@ const Header = () => {
     [isMobile, openMenu]
   );
 
-  const logoSize = isMobile || small ? 'small' : onNarrowScreen ? 'medium' : 'large';
+  const logoSize = isMobile || small ? 'small' : isNarrowScreen ? 'medium' : 'large';
   const menuButtonIcon = openMenu ? 'close' : 'menu';
 
   return (
@@ -100,7 +100,7 @@ const Header = () => {
         )}
       </header>
       {isMobile && (
-        // Rendered outside the <header/> to "slide" under the "sticky" header
+        // Must be rendered outside the <header/> to "slide" under the "sticky" header
         <nav className={classMenu} onClick={doCloseMenu}>
           <TopMenuContent activeClassName={styles.activeLink} />
         </nav>

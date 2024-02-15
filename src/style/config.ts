@@ -1,6 +1,7 @@
 // Style config
 
-export * from './fonts'; // NOTE: Manage fonts outside this file
+export const MOBILE_SCREEN_MAX_WIDTH = 800; // 640
+export const SERVER_SIDE_MOBILE_FIRST = true; // true - for mobile, false - for desktop
 
 /**
  * Theme colors for the website, applied in CSS as `var(--color-nameOfColorObjectProperty)`
@@ -16,3 +17,5 @@ export const COLORS = {
   warning: '#FFFF00',
   error: '#FF0000',
 };
+
+export * from './fonts'; // NOTE: Manage fonts outside this file

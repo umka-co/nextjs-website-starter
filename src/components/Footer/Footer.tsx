@@ -10,17 +10,17 @@ import styles from './Footer.module.css';
  * @component Footer
  */
 const Footer = () => {
-  const onSmallScreen = useIsMobile(320);
+  const isSmallScreen = useIsMobile(320);
   const isMobile = useIsMobile();
-  const onNarrowScreen = useIsMobile(1024);
-  const logoTextHidden = onSmallScreen || (!isMobile && onNarrowScreen);
+  const isNarrowScreen = useIsMobile(1024);
+  const logoTextHidden = isSmallScreen || (!isMobile && isNarrowScreen);
 
   const className = useMemo(
     () => [styles.footer, isMobile ? styles.mobile : styles.desktop].filter(Boolean).join(' '),
     [isMobile]
   );
 
-  const copyrightHolder = useMemo(() => <Link href="https://domain-name.com">TODO: Add company name</Link>, []);
+  const copyrightHolder = useMemo(() => <Link href="https://TODO-domain-name.com">TODO: Add company name</Link>, []);
 
   return (
     <footer className={className} id="footer">
@@ -50,7 +50,7 @@ const Footer = () => {
           // Desktop version of the footer with copyright
           <div className={styles.copyright}>
             <div>
-              Copyright &copy; 2020-{new Date().getFullYear()} {copyrightHolder}
+              Copyright &copy; TODO: 2020-{new Date().getFullYear()} {copyrightHolder}
             </div>
           </div>
         )}

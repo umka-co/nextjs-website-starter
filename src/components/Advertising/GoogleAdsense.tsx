@@ -1,6 +1,3 @@
-// import Script from 'next/script';
-// import { SCRIPT_STRATEGY } from '@/layout/config';
-
 const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
 /**
@@ -16,7 +13,7 @@ const GoogleAdsense = () => {
     />
   );
 
-  // Using of <Script/> shows the following error: AdSense head tag doesn't support data-nscript attribute.
+  // Using of NextJS's <Script/> shows the following error: AdSense head tag doesn't support data-nscript attribute.
   // return (
   //   <Script
   //     async

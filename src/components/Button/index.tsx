@@ -1,3 +1,3 @@
 import Button from './Button';
 
-export { Button as default, Button };
+export default Button;

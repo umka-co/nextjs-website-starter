@@ -74,7 +74,7 @@ const HomePage = () => {
  * MetaData for the page
  */
 export const metadata = {
-  title: `Free Caps Lock, Num Lock, Scroll Lock Software Indicator - ${APP_NAME}`,
+  title: `TODO: Something cool here - ${APP_NAME}`,
   alternates: {
     canonical: PUBLIC_URL,
   },
