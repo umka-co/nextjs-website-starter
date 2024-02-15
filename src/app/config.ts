@@ -6,7 +6,7 @@ export const OPEN_GRAPH_DEFAULT = {
   // TODO: Put your texts here
   siteName: `${APP_NAME} Website`,
   title: APP_NAME,
-  description: `Opengraph description for ${APP_NAME}, put nice Promo here`,
+  description: `TODO: OpenGraph description for ${APP_NAME}, put nice Promo here`,
 
   // TODO: Replace with your own images and dimensions
   images: [

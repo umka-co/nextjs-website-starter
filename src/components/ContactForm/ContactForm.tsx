@@ -1,12 +1,8 @@
 'use client';
 import { FormEvent, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs, { isEmailJsInitialized } from '@/lib/emailjs';
 import { Button } from '@/components';
 import styles from './ContactForm.module.css';
-
-// We need to call it once to initialize emailjs
-// emailjs.init(envRequired(process.env.NEXT_PUBLIC_EMAILJS_KEY));
-process.env.NEXT_PUBLIC_EMAILJS_KEY && emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_KEY);
 
 /**
  * Verifies if the email address is valid
@@ -48,7 +44,11 @@ const ContactForm = () => {
     }
 
     try {
-      const result = await emailjs.send('default_service', 'TODO: template_xxx', {
+      if (!isEmailJsInitialized()) {
+        throw new Error('EmailJS is not initialized');
+      }
+
+      await emailjs.send('TODO: default_service', 'TODO: template_xxx', {
         email,
         message,
       });

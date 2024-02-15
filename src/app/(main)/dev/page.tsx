@@ -1,8 +1,14 @@
+'use client';
 import { useMemo } from 'react';
 import { redirect } from 'next/navigation';
 import { Typo, Wrapper } from '@/components';
 import { IS_DEBUG } from '@/config';
 
+/**
+ * Renders a "DevTools" page that is only available in development mode (IS_DEBUG == true)
+ * You can use this page to test and debug various components and styles
+ * @page DevTools
+ */
 const DevToolsPage = () => {
   const filler = useMemo(() => <Typo style={{ opacity: 0.3 }}>{'Some text check margins. '.repeat(12)}</Typo>, []);
 

@@ -38,7 +38,7 @@ const StyledLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
         <Footer />
 
         <MobileOrDesktop
-        // Remove this injector if you don't use selectors .onMobile and .onDesktop in CSS styles
+        // TODO: Remove this injector if you don't use .onMobile and .onDesktop classes in your CSS styles
         />
       </body>
     </>

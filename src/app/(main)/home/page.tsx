@@ -10,12 +10,12 @@ import { ICONS } from '../../../components/Icon/icons';
  * @page Home
  */
 const HomePage = () => {
-  const appName = <strong>{APP_NAME}</strong>;
-
   return (
     <Wrapper tag="article">
-      <Typo variant="header1">Header 1 Style</Typo>
-      <Typo variant="paragraph">{'Paragraph of text'.repeat(10)}</Typo>
+      <Typo variant="header1">{APP_NAME}</Typo>
+      <Typo variant="paragraph">
+        <strong>{APP_NAME}</strong> {'Paragraph of text. '.repeat(10)}
+      </Typo>
       <Typo variant="header3">Header 2 Style</Typo>
       <Typo variant="list">
         <li>
