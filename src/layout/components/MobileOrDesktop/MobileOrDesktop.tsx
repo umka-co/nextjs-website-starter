@@ -1,13 +1,13 @@
 'use client';
-import { useModifyBodyClassOnMobile } from '@/hooks/layout';
+import { useModifyBodyClassMobileOrDesktop } from '@/hooks/layout';
 
 /**
- * Injects a hook to change the body class depending on screen size: onMobile vs. onDesktop
+ * Injects a hook to change the body class depending on screen size: isMobile vs. isDesktop
  * @injector MobileOrDesktop
  */
 const MobileOrDesktop = () => {
-  useModifyBodyClassOnMobile();
-  return null;
+  useModifyBodyClassMobileOrDesktop();
+  return null; // No need to render anything
 };
 
 export default MobileOrDesktop;

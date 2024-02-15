@@ -1,7 +1,7 @@
 'use client';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Button } from '@/components';
-import { useOnMobile } from '@/hooks';
+import { useIsMobile } from '@/hooks';
 import { IS_BROWSER } from '@/utils/environment';
 import Logo from '../../../components/Logo';
 import TopMenuContent from './TopMenuContent';
@@ -19,8 +19,8 @@ const Header = () => {
   const [small, setSmall] = useState(
     (global?.window && window?.scrollY) || (global?.document && document?.documentElement?.scrollTop) > HEIGHT_BIG
   );
-  const onMobile = useOnMobile();
-  const onNarrowScreen = useOnMobile(1024);
+  const isMobile = useIsMobile();
+  const onNarrowScreen = useIsMobile(1024);
 
   const toggleMenu = useCallback(() => {
     setOpenMenu((oldValue) => !oldValue);
@@ -61,28 +61,28 @@ const Header = () => {
 
   const classHeader = useMemo(
     () =>
-      [styles.header, onMobile ? styles.mobile : styles.desktop, small ? styles.small : styles.big]
+      [styles.header, isMobile ? styles.mobile : styles.desktop, small ? styles.small : styles.big]
         .filter(Boolean)
         .join(' '),
-    [onMobile, small]
+    [isMobile, small]
   );
 
   const classMenu = useMemo(
     () =>
-      [styles.menu, onMobile ? styles.mobile : styles.desktop, openMenu ? styles.open : styles.close]
+      [styles.menu, isMobile ? styles.mobile : styles.desktop, openMenu ? styles.open : styles.close]
         .filter(Boolean)
         .join(' '),
-    [onMobile, openMenu]
+    [isMobile, openMenu]
   );
 
-  const logoSize = onMobile || small ? 'small' : onNarrowScreen ? 'medium' : 'large';
+  const logoSize = isMobile || small ? 'small' : onNarrowScreen ? 'medium' : 'large';
   const menuButtonIcon = openMenu ? 'close' : 'menu';
 
   return (
     <div className={styles.wrapper}>
       <header className={classHeader} id="header">
         <Logo href="/" size={logoSize} />
-        {onMobile ? (
+        {isMobile ? (
           <>
             <div className={styles.spacer} onClick={toggleMenu} />
             <Button
@@ -99,7 +99,7 @@ const Header = () => {
           </nav>
         )}
       </header>
-      {onMobile && (
+      {isMobile && (
         // Rendered outside the <header/> to "slide" under the "sticky" header
         <nav className={classMenu} onClick={doCloseMenu}>
           <TopMenuContent activeClassName={styles.activeLink} />

@@ -1,3 +1,12 @@
+:root {
+  /* We will sync --color-xxx and --font-xxx values with COLORS and FONTS during the MainLayout layout loading */
+  /* TODO: Better set same values as in COLORS and FONTS configs */
+  --color-primary: #ff0000;
+
+  --font-size: 16px;
+  --is-mobile: 0;
+}
+
 body {
   margin: unset;
   max-width: unset;

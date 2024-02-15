@@ -1,7 +1,7 @@
 'use client';
 import { useMemo } from 'react';
 import { APP_NAME } from '@/config';
-import { useOnMobile } from '@/hooks';
+import { useIsMobile } from '@/hooks';
 import { Link, Logo, SocialMedia } from '@/components';
 import styles from './Footer.module.css';
 
@@ -10,14 +10,14 @@ import styles from './Footer.module.css';
  * @component Footer
  */
 const Footer = () => {
-  const onSmallScreen = useOnMobile(320);
-  const onMobile = useOnMobile();
-  const onNarrowScreen = useOnMobile(1024);
-  const logoTextHidden = onSmallScreen || (!onMobile && onNarrowScreen);
+  const onSmallScreen = useIsMobile(320);
+  const isMobile = useIsMobile();
+  const onNarrowScreen = useIsMobile(1024);
+  const logoTextHidden = onSmallScreen || (!isMobile && onNarrowScreen);
 
   const className = useMemo(
-    () => [styles.footer, onMobile ? styles.mobile : styles.desktop].filter(Boolean).join(' '),
-    [onMobile]
+    () => [styles.footer, isMobile ? styles.mobile : styles.desktop].filter(Boolean).join(' '),
+    [isMobile]
   );
 
   const copyrightHolder = useMemo(() => <Link href="https://domain-name.com">TODO: Add company name</Link>, []);
@@ -26,7 +26,7 @@ const Footer = () => {
     <footer className={className} id="footer">
       <div className={styles.logo}>
         <Logo href="/" noText={logoTextHidden} size="small" />
-        {onMobile && (
+        {isMobile && (
           // Mobile version of the footer, no copyright
           <span className={styles.text}>
             {APP_NAME}
@@ -46,7 +46,7 @@ const Footer = () => {
           <Link href="/legal/terms-conditions/">Terms of Use</Link>
           <Link href="/sitemap/">Site Map</Link>
         </div>
-        {!onMobile && (
+        {!isMobile && (
           // Desktop version of the footer with copyright
           <div className={styles.copyright}>
             <div>

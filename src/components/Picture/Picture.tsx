@@ -2,7 +2,7 @@
 import { FunctionComponent } from 'react';
 import Image, { ImageProps } from 'next/image';
 import { APP_NAME } from '@/config';
-import { useOnMobile } from '@/hooks';
+import { useIsMobile } from '@/hooks';
 import Link from '../Link';
 
 export const PICTURES = {
@@ -28,14 +28,14 @@ interface Props extends Partial<ImageProps> {
  * @param {string} [variant] - variant of the image to render, default is 'default'
  */
 const Picture: FunctionComponent<Props> = ({ alt, href, src, title, variant = 'default', ...restOfProps }) => {
-  const onMobile = useOnMobile();
+  const isMobile = useIsMobile();
   const altToRender = alt ?? `${APP_NAME} Image`;
   const srcToRender = src ?? PICTURES[variant];
   const titleToRender = title ?? `Picture of ${APP_NAME}`;
 
   // TODO: set own dimensions
-  const width = onMobile ? 320 : 400;
-  const height = onMobile ? 480 : 600;
+  const width = isMobile ? 320 : 400;
+  const height = isMobile ? 480 : 600;
 
   const imageToRender = (
     <Image alt={altToRender} height={height} src={srcToRender} title={titleToRender} width={width} {...restOfProps} />

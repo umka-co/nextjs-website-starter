@@ -1,6 +1,5 @@
 import { Inter, Poppins } from 'next/font/google';
 
-// Typography from: https://www.figma.com/file/ab4AHDtL6zrf6VsIAejzbm/SaaS-%26-App-Website-I-Saasto-(Community)?node-id=1707%3A7833&mode=dev
 const fontPoppins = Poppins({
   weight: ['600', '700'],
   subsets: ['latin'],

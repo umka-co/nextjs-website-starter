@@ -21,10 +21,11 @@ export const viewport: Viewport = {
 };
 
 /**
- * Layout for `(main)` styled pages, renders head and body tags
+ * Layout for `(main)` styled pages, renders head and body tags.
+ * Applies colors and font(s) to the global CSS variables.
  * @layout Main
  */
-const StyledLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
+const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <head>
@@ -38,11 +39,11 @@ const StyledLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
         <Footer />
 
         <MobileOrDesktop
-        // TODO: Remove this injector if you don't use .onMobile and .onDesktop classes in your CSS styles
+        // TODO: Remove this injector if you don't use .isMobile and .isDesktop classes in your CSS styles
         />
       </body>
     </>
   );
 };
 
-export default StyledLayout;
+export default MainLayout;
