@@ -1,10 +1,23 @@
-:root {
-  /* We will sync --color-xxx and --font-xxx values with COLORS and FONTS during the MainLayout layout loading */
-  /* TODO: Better set same values as in COLORS and FONTS configs */
-  --color-primary: #ff0000;
+/*******************************************************************************
 
-  --font-size: 16px;
-  --is-mobile: 0;
+    Styles used by the Main layout. Applied to `/src/app/(main)/...` pages. 
+
+*******************************************************************************/
+
+:root {
+  /* We will sync --color-xxx and --font-xxx values with COLORS and FONTS during the Main layout loading */
+  /* Note --font-xxx values are set by Next.js fonts, see `/src/style/fonts.ts` file for details */
+  /* TODO: Better set values matching COLORS and FONTS configs here */
+
+  --color-text: #222222;
+  --color-background: #ffffff;
+  --color-headerAndFooter: #fff5ed;
+
+  --color-primary: #bf2a1d;
+  --color-secondary: #404040;
+  --color-success: #008f00;
+  --color-warning: #bbbb00;
+  --color-error: #ff0000;
 }
 
 body {

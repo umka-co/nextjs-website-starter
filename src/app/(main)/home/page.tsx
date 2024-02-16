@@ -1,6 +1,6 @@
 import { APP_NAME, PUBLIC_URL } from '@/config';
 import { Button, Icon, SocialMedia, Stack, Typo, Wrapper } from '@/components';
-import { ICONS } from '@/components/Icon';
+import { ICONS, IconName } from '@/components/Icon';
 import DownloadButton from '@/components/DownloadButton';
 import Video from '@/components/Video';
 import Picture from '@/components/Picture';
@@ -41,14 +41,24 @@ const HomePage = () => {
           <Button variant="icon" icon="menu" />
           <Button variant="icon" icon="close" />
           <Button variant="icon" icon="SOME_INVALID_NAME" />
+          <Button disabled variant="icon" icon="close" />
         </Stack>
+        <Button disabled variant="contained">
+          Contained Disabled
+        </Button>
+        <Button disabled variant="outlined">
+          Outlined Disabled
+        </Button>
+        <Button disabled variant="text">
+          Outlined Text
+        </Button>
         <DownloadButton>Download Button</DownloadButton>
       </Stack>
 
       <Typo variant="header1">Icon</Typo>
       <Stack direction="row" alignItems="center">
         {Object.keys(ICONS).map((icon) => (
-          <Icon key={icon} icon={icon} size="2rem" />
+          <Icon key={icon} icon={icon as IconName} size="2rem" />
         ))}
       </Stack>
 

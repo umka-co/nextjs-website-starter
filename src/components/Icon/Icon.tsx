@@ -1,6 +1,6 @@
 import { FunctionComponent, SVGAttributes } from 'react';
 import { ICON_COLOR_NORMAL, ICON_SIZE } from '@/style';
-import { ICONS } from './config';
+import { ICONS, IconName } from './config';
 
 /**
  * How to use:
@@ -13,7 +13,7 @@ import { ICONS } from './config';
 
 export interface IconProps extends SVGAttributes<SVGElement> {
   color?: string;
-  icon: string;
+  icon: IconName;
   size?: string | number;
   title?: string;
 }
@@ -34,7 +34,7 @@ const Icon: FunctionComponent<IconProps> = ({
   style,
   ...restOfProps
 }) => {
-  const iconName = (icon || 'default').trim().toLowerCase();
+  const iconName = (icon || 'default').trim().toLowerCase() as IconName;
 
   let ComponentToRender = ICONS[iconName];
   if (!ComponentToRender) {

@@ -1,5 +1,5 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
-import './globals.css';
+import './default.css';
 
 /**
  * Root layout, renders only the <html> tag!

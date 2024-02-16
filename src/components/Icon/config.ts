@@ -29,7 +29,7 @@ import { IoIosCloseCircle } from 'react-icons/io';
  * Important: properties of ICONS object MUST be lowercase!
  * Note: You can use camelCase or UPPERCASE in the <Icon icon="someIconByName" /> component
  */
-export const ICONS: Record<string, ComponentType> = {
+export const ICONS /*: Record<string, ComponentType>*/ = {
   default: IconNotFound,
   // default: FaRegFrown,
 
@@ -58,3 +58,8 @@ export const ICONS: Record<string, ComponentType> = {
   twitter: FaTwitter,
   youtube: FaYoutube,
 };
+
+/**
+ * List of all available Icon names
+ */
+export type IconName = keyof typeof ICONS;
