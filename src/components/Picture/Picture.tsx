@@ -4,10 +4,7 @@ import Image, { ImageProps } from 'next/image';
 import { useIsMobile } from '@/hooks';
 import { PictureProps } from '@/utils';
 import Link from '../Link';
-import { PICTURES } from './config';
-
-export const PICTURE_MULTIPLIER_FOR_MOBILE = 0.75; // Set 1.0 if you want to use the same size for mobile and desktop
-export const PICTURE_MULTIPLIER_FOR_DESKTOP = 1; // Set 1.5 if you want bigger pictures for desktop
+import { PICTURES, PICTURE_MULTIPLIER_DESKTOP, PICTURE_MULTIPLIER_MOBILE } from './config';
 
 interface Props extends Partial<ImageProps> {
   href?: string;
@@ -26,7 +23,7 @@ interface Props extends Partial<ImageProps> {
  */
 const Picture: FunctionComponent<Props> = ({ alt, href, src, title, variant = 'default', ...restOfProps }) => {
   const isMobile = useIsMobile();
-  const sizeMultiplier = isMobile ? PICTURE_MULTIPLIER_FOR_MOBILE : PICTURE_MULTIPLIER_FOR_DESKTOP;
+  const sizeMultiplier = isMobile ? PICTURE_MULTIPLIER_MOBILE : PICTURE_MULTIPLIER_DESKTOP;
 
   const picture: PictureProps = PICTURES[variant] ?? PICTURES.default;
   const altToRender: string = alt ?? String(picture.alt);
