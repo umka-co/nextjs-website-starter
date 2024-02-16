@@ -2,7 +2,9 @@
 import { useMemo } from 'react';
 import { APP_NAME } from '@/config';
 import { useIsMobile } from '@/hooks';
-import { Link, Logo, SocialMedia } from '@/components';
+import Link from '../Link';
+import Logo from '../Logo';
+import SocialMedia from '../SocialMedia';
 import styles from './Footer.module.css';
 
 /**

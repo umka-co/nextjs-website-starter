@@ -1,11 +1,10 @@
-import { FunctionComponent } from 'react';
-import { IconProps } from '../Icon';
+import { FunctionComponent, SVGAttributes } from 'react';
 
 /**
  * Renders the icon that was not found
- * Based on ./missing-image.svg
+ * Note: You can replace this icon with own one, but use some contrast icon to visually detect issues
  */
-const IconNotFound: FunctionComponent<IconProps> = (props) => {
+const IconNotFound: FunctionComponent<SVGAttributes<SVGElement>> = (props) => {
   return (
     <svg width="800px" height="800px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" {...props}>
       <defs>

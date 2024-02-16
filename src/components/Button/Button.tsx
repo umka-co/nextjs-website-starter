@@ -1,14 +1,16 @@
 'use client';
 import { FunctionComponent, PropsWithChildren, useCallback, useMemo, KeyboardEvent, ButtonHTMLAttributes } from 'react';
-import { FONTS } from '@/style/config';
 import {
   BUTTON_ICON_SIZE,
   BUTTON_MARGIN,
   BUTTON_VARIANT,
+  FONTS,
   ICON_COLOR_INVERTED,
   ICON_COLOR_NORMAL,
-} from '@/components/config';
-import { Icon, Link, Stack } from '@/components';
+} from '@/style';
+import Icon from '../Icon';
+import Link from '../Link';
+import Stack from '../Stack';
 import styles from './Button.module.css';
 
 export type ButtonVariant = 'contained' | 'outlined' | 'text' | 'icon';

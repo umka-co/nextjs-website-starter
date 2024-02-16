@@ -1,9 +1,13 @@
-import { APP_NAME, PUBLIC_URL } from '@/config';
 import { FunctionComponent, PropsWithChildren } from 'react';
 import type { Metadata, Viewport } from 'next';
+import { APP_NAME, PUBLIC_URL } from '@/config';
 import { OPEN_GRAPH_DEFAULT } from '@/app/config';
-import { FONTS } from '@/layout/fonts';
-import { Advertising, Analytics, Footer, Header, MobileOrDesktop } from '@/layout/components';
+import { FONTS } from '@/style';
+import Analytics from '@/components/Analytics';
+import Advertising from '@/components/Advertising';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import MobileOrDesktop from '@/components/MobileOrDesktop';
 import './main.css';
 
 export const metadata: Metadata = {

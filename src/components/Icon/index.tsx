@@ -1,3 +1,4 @@
 import Icon from './Icon';
 
-export { Icon as default, Icon };
+export * from './config';
+export default Icon;

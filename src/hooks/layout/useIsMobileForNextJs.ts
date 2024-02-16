@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { MOBILE_SCREEN_MAX_WIDTH, SERVER_SIDE_MOBILE_FIRST } from '@/layout/config';
+import { MOBILE_SCREEN_MAX_WIDTH, SERVER_SIDE_MOBILE_FIRST } from '@/style';
 import useIsMobileByMediaQuery from './useIsMobileByMediaQuery';
 
 /**

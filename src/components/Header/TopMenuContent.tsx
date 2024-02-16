@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { Button } from '@/components';
+import Button from '../Button';
 
 const MARGIN_BETWEEN_MENU_ITEMS = '0.125rem'; // TODO: Set own value here
 

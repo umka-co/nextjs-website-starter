@@ -1,8 +1,8 @@
 'use client';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Button } from '@/components';
 import { useIsMobile } from '@/hooks';
-import { IS_BROWSER } from '@/utils/environment';
+import { IS_BROWSER } from '@/utils';
+import Button from '../Button';
 import Logo from '../Logo';
 import TopMenuContent from './TopMenuContent';
 import styles from './Header.module.css';
@@ -95,7 +95,8 @@ const Header = () => {
           </>
         ) : (
           <nav className={classMenu}>
-            <TopMenuContent activeClassName={styles.activeLink} />
+            {' '}
+            <TopMenuContent activeClassName={styles.activeLink} />{' '}
           </nav>
         )}
       </header>

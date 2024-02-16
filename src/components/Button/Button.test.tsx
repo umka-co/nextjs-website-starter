@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { randomText } from '@/utils/text';
-import { BUTTON_MARGIN, BUTTON_VARIANT } from '@/components/config';
+import { BUTTON_MARGIN, BUTTON_VARIANT } from '@/style';
+import { ICONS } from '../Icon';
 import Button, { ButtonVariant } from './Button';
-import { ICONS } from '../Icon/icons';
 
 const ComponentToTest = Button;
 
@@ -62,12 +62,6 @@ describe('<Button/> component', () => {
     expect(link).toHaveAttribute('rel', expect.stringContaining('noreferrer'));
   });
 
-  const testId = randomText(8);
-  render(<ComponentToTest data-testid={testId}>Default Variant</ComponentToTest>);
-  const button = screen.getByTestId(testId);
-  expect(button).toBeDefined();
-  expect(button).toHaveAttribute('class', expect.stringContaining(BUTTON_VARIANT));
-
   it('supports .iconLeft property', () => {
     // Verify that all icons are supported
     for (const icon of Object.keys(ICONS)) {
@@ -79,11 +73,6 @@ describe('<Button/> component', () => {
       );
       const button = screen.getByTestId(testId);
       expect(button).toBeDefined();
-      // // Stack for Icon and Title
-      // const container = button.firstChild;
-      // expect(container).toBeDefined();
-      // // Icon
-      // const svg = container?.firstChild;
       const svg = button.querySelector('svg');
       expect(svg).toHaveAttribute('data-icon', icon.toLowerCase());
     }
@@ -146,7 +135,13 @@ describe('<Button/> component', () => {
   });
 
   it('supports .variant property', () => {
-    const VARIANTS: ButtonVariant[] = ['contained', 'outlined', 'text'];
+    const testId = randomText(8);
+    render(<ComponentToTest data-testid={testId}>Default Variant</ComponentToTest>);
+    const button = screen.getByTestId(testId);
+    expect(button).toBeDefined();
+    expect(button).toHaveAttribute('class', expect.stringContaining(BUTTON_VARIANT));
+
+    const VARIANTS: ButtonVariant[] = ['contained', 'outlined', 'text', 'icon'];
     // Verify that variants are supported
     for (const variant of VARIANTS) {
       const testId = randomText(8);

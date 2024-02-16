@@ -1,5 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
-import { MOBILE_SCREEN_MAX_WIDTH } from '@/layout/config';
+import { MOBILE_SCREEN_MAX_WIDTH } from '@/style';
 
 /**
  * Hook to detect isMobile vs. isDesktop using Media Query

@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { randomColor, randomText } from '@/utils/text';
-import { ICON_SIZE } from '@/components/config';
-import { ICONS } from './icons';
+import { ICON_SIZE } from '@/style';
+import { ICONS } from './config';
 import Icon from './Icon';
 
 const ComponentToTest = Icon;
@@ -12,7 +12,7 @@ const ComponentToTest = Icon;
 describe('<Icon/> component', () => {
   it('renders itself', () => {
     const testId = randomText(8);
-    render(<ComponentToTest data-testid={testId} />);
+    render(<ComponentToTest data-testid={testId} icon="" />);
     const svg = screen.getByTestId(testId);
     expect(svg).toBeDefined();
     expect(svg).toHaveAttribute('data-icon', 'default');
@@ -23,7 +23,7 @@ describe('<Icon/> component', () => {
   it('supports .color property', () => {
     const testId = randomText(8);
     const color = randomColor(); // Note: 'rgb(255, 128, 0)' format is used by react-icons npm, so tests may fail
-    render(<ComponentToTest data-testid={testId} color={color} />);
+    render(<ComponentToTest data-testid={testId} color={color} icon="" />);
     const svg = screen.getByTestId(testId);
     expect(svg).toHaveAttribute('data-icon', 'default');
     // expect(svg).toHaveAttribute('color', color); // TODO: Looks like MUI Icons exclude .color property from <svg> rendering
@@ -45,7 +45,7 @@ describe('<Icon/> component', () => {
   it('supports .size property', () => {
     const testId = randomText(8);
     const size = Math.floor(Math.random() * 128) + 1;
-    render(<ComponentToTest data-testid={testId} size={size} />);
+    render(<ComponentToTest data-testid={testId} icon="" size={size} />);
     const svg = screen.getByTestId(testId);
     expect(svg).toHaveAttribute('height', String(size));
     expect(svg).toHaveAttribute('width', String(size));

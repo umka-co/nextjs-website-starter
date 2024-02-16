@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { render, screen } from '@testing-library/react';
+import { randomText } from '@/utils/text';
 import Wrapper, { WrapperProps } from './Wrapper';
-import { randomText } from '../../utils/text';
 
 /**
  * Composition of component(s) to test

@@ -1,0 +1,1 @@
+Put all custom SVG icons here as SWG files or React components

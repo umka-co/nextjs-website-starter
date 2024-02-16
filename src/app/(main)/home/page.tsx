@@ -1,9 +1,9 @@
 import { APP_NAME, PUBLIC_URL } from '@/config';
 import { Button, Icon, SocialMedia, Stack, Typo, Wrapper } from '@/components';
+import { ICONS } from '@/components/Icon';
 import DownloadButton from '@/components/DownloadButton';
 import Video from '@/components/Video';
 import Picture from '@/components/Picture';
-import { ICONS } from '../../../components/Icon/icons';
 
 /**
  * Home page content

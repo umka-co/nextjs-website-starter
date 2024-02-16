@@ -1,4 +1,4 @@
-import { MOBILE_SCREEN_MAX_WIDTH } from '@/layout/config';
+import { MOBILE_SCREEN_MAX_WIDTH } from '@/style';
 import useWindowsSize from './useWindowSize';
 
 /**

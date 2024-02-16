@@ -1,5 +1,5 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
-import { Analytics } from '@/layout/components';
+import Analytics from '@/components/Analytics';
 import './unstyled.css';
 
 /**

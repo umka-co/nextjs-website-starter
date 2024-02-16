@@ -1,7 +1,7 @@
 // 'use client';
 import { FunctionComponent, HTMLAttributes, PropsWithChildren, ReactNode, useMemo } from 'react';
 import { useIsMobile } from '@/hooks/layout';
-import { FONTS } from '@/style/config';
+import { FONTS } from '@/style';
 import HtmlTag from '../HtmlTag';
 import styles from './Typo.module.css';
 

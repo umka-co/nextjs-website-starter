@@ -1,21 +1,21 @@
-// Style config
+// Styling and layout configuration
+// NOTE: Manage Fonts and Colors outside this file
+
+import { COLORS } from './colors';
 
 export const MOBILE_SCREEN_MAX_WIDTH = 800; // 640
 export const SERVER_SIDE_MOBILE_FIRST = true; // true - for mobile, false - for desktop
 
 /**
- * Theme colors for the website, applied in CSS as `var(--color-nameOfColorObjectProperty)`
+ * Button component
  */
-export const COLORS = {
-  // TODO: Put your theme color here
-  text: '#222222', // rgb(34, 34, 34)
-  background: '#FFFFFF',
-  headerAndFooter: '#fff5ed', // rgb(255, 245, 237)
-  primary: '#BF2A1D', // rgb(191, 42, 29)
-  secondary: '#404040', // rgb(64, 64, 64)
-  success: '#00FF00',
-  warning: '#FFFF00',
-  error: '#FF0000',
-};
+export const BUTTON_VARIANT = 'contained'; // | 'text' | 'outlined'
+export const BUTTON_MARGIN = '0.5rem';
+export const BUTTON_ICON_SIZE = '1.5rem';
 
-export * from './fonts'; // NOTE: Manage fonts outside this file
+/**
+ * Icon component
+ */
+export const ICON_SIZE = '4rem';
+export const ICON_COLOR_NORMAL = COLORS.primary;
+export const ICON_COLOR_INVERTED = COLORS.background;

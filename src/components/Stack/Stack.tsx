@@ -1,6 +1,6 @@
 import { FunctionComponent, HTMLAttributes, PropsWithChildren, useMemo } from 'react';
-import styles from './Stack.module.css';
 import HtmlTag from '../HtmlTag';
+import styles from './Stack.module.css';
 
 export interface StackProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
   alignContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch';
