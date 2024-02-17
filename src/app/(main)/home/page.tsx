@@ -40,18 +40,19 @@ const HomePage = () => {
           <Typo>Variant Icon:</Typo>
           <Button variant="icon" icon="menu" />
           <Button variant="icon" icon="close" />
-          <Button variant="icon" icon="SOME_INVALID_NAME" />
+          {/* <Button variant="icon" icon="SOME_INVALID_NAME" /> */}
           <Button disabled variant="icon" icon="close" />
         </Stack>
-        <Button disabled variant="contained">
-          Contained Disabled
+        <Button disabled variant="text">
+          Outlined Text
         </Button>
         <Button disabled variant="outlined">
           Outlined Disabled
         </Button>
-        <Button disabled variant="text">
-          Outlined Text
+        <Button disabled variant="contained">
+          Contained Disabled
         </Button>
+
         <DownloadButton>Download Button</DownloadButton>
       </Stack>
 

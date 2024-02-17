@@ -1,6 +1,5 @@
 .footer {
-  background-color: #ffffff;
-  background-color: rgba(255, 248, 242, 0.95);
+  background-color: var(--color-headerAndFooter);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 
@@ -44,7 +43,7 @@
 .content {
   align-items: center;
   /* Same as .dark */
-  color: rgb(28, 14, 13);
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -88,7 +87,7 @@
 
 .desktop .menu a:focus-visible,
 .desktop .menu a:hover {
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
   /* transition: 0.3s all; */
 }
 

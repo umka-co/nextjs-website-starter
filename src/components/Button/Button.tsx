@@ -8,7 +8,7 @@ import {
   ICON_COLOR_INVERTED,
   ICON_COLOR_NORMAL,
 } from '@/style';
-import Icon from '../Icon';
+import Icon, { IconName } from '../Icon';
 import Link from '../Link';
 import Stack from '../Stack';
 import styles from './Button.module.css';
@@ -18,9 +18,9 @@ export type ButtonVariant = 'contained' | 'outlined' | 'text' | 'icon';
 export interface ButtonProps extends PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement>> {
   activeClassName?: string;
   href?: string;
-  icon?: string;
-  iconLeft?: string;
-  iconRight?: string;
+  icon?: IconName;
+  iconLeft?: IconName;
+  iconRight?: IconName;
   margin?: string | number;
   spinIcon?: boolean;
   variant?: ButtonVariant;

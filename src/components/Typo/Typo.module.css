@@ -36,19 +36,19 @@
 /* Colors */
 
 .dark {
-  color: rgb(28, 14, 13);
+  color: var(--color-text);
 }
 
 .light {
-  color: rgb(227, 241, 242);
+  color: var(--color-background);
 }
 
 .primary {
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
 }
 
 .secondary {
-  color: rgb(64, 64, 64);
+  color: var(--color-secondary);
 }
 
 /* Variants for All Screen */
