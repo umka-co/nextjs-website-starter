@@ -33,9 +33,24 @@ const HomePage = () => {
 
       <Typo variant="header1">Button</Typo>
       <Stack alignItems="center">
-        <Button variant="contained">Variant Contained</Button>
-        <Button variant="outlined">Variant Outlined</Button>
-        <Button variant="text">Variant Text</Button>
+        <Stack direction="row">
+          <Button variant="contained">Variant Contained</Button>
+          <Button disabled variant="contained">
+            Contained Disabled
+          </Button>
+        </Stack>
+        <Stack direction="row">
+          <Button variant="outlined">Variant Outlined</Button>
+          <Button disabled variant="outlined">
+            Outlined Disabled
+          </Button>
+        </Stack>
+        <Stack direction="row">
+          <Button variant="text">Variant Text</Button>
+          <Button disabled variant="text">
+            Text Disabled
+          </Button>
+        </Stack>
         <Stack direction="row" alignItems="center">
           <Typo>Variant Icon:</Typo>
           <Button variant="icon" icon="menu" />
@@ -43,15 +58,6 @@ const HomePage = () => {
           {/* <Button variant="icon" icon="SOME_INVALID_NAME" /> */}
           <Button disabled variant="icon" icon="close" />
         </Stack>
-        <Button disabled variant="text">
-          Outlined Text
-        </Button>
-        <Button disabled variant="outlined">
-          Outlined Disabled
-        </Button>
-        <Button disabled variant="contained">
-          Contained Disabled
-        </Button>
 
         <DownloadButton>Download Button</DownloadButton>
       </Stack>
