@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import { APP_NAME } from '@/config';
 import { ObjectPropByName } from '@/utils';
+import { IconName } from '../Icon';
 import Button from '../Button';
 import Stack, { StackProps } from '../Stack/Stack';
 
@@ -41,7 +42,13 @@ const SocialMedia: FunctionComponent<Props> = ({ variant = 'full', ...restOfProp
   return (
     <Stack direction="row" justifyContent="center" {...restOfProps}>
       {iconsToRender.map((key) => (
-        <Button key={key} icon={key} href={SOCIAL_MEDIA[key].href} title={SOCIAL_MEDIA[key].title} variant="icon" />
+        <Button
+          key={key}
+          icon={key as IconName}
+          href={SOCIAL_MEDIA[key].href}
+          title={SOCIAL_MEDIA[key].title}
+          variant="icon"
+        />
       ))}
     </Stack>
   );
