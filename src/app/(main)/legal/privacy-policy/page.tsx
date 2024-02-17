@@ -155,8 +155,8 @@ const PrivacyPolicyPage = () => {
         <li>
           Using online <Link href="/contact/">contact form</Link>
         </li>
-        <li>Via email support(at)domain-name[dot]com</li>
-        <li>Post mail to 1428 Elm Street, Springwood, Ohio, USA </li>
+        <li>Via email TODO: support(at)domain-name[dot]com</li>
+        <li>Post mail to TODO: 1428 Elm Street, Springwood, Ohio, USA </li>
       </Typo>
     </Wrapper>
   );
