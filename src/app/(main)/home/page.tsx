@@ -76,8 +76,6 @@ const HomePage = () => {
         <Picture variant="second" />
       </Stack>
 
-      <Typo variant="paragraph">{'Another paragraph of text. '.repeat(10)}</Typo>
-
       <Typo variant="header1">Video</Typo>
       <Stack alignItems="center" padding="1rem 0">
         <Video video="demo" />
