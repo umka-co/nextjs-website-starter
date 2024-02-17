@@ -13,7 +13,7 @@ const TermsAndConditionsPage = () => {
       <Typo variant="paragraph">
         Welcome to the <strong>TODO: DOMAIN-NAME.COM</strong> website (&quot;Site&quot;). This Site is a property of{' '}
         <strong>
-          <Link href="https://other-domain.com">TODO: COMPANY OR OWNER</Link>
+          <Link href="https://TODO-other-domain.com">TODO: COMPANY OR OWNER</Link>
         </strong>{' '}
         (&quot;Owner&quot;). By accessing the Site, you agree to follow and be bound by the following terms and
         conditions concerning your use of the Site and <Link href="/legal/privacy-policy"> our privacy policy</Link>.
