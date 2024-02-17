@@ -4,7 +4,7 @@ import { Inter, Poppins } from 'next/font/google';
 const fontPoppins = Poppins({
   weight: ['600', '700'],
   subsets: ['latin'],
-  variable: '--font-poppins',
+  variable: '--font-poppins', // This set a CSS variable for the font, so we don't need to set it manually in the Main layout
   display: 'swap',
 });
 
@@ -12,23 +12,14 @@ const fontPoppins = Poppins({
 const fontInter = Inter({
   weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-inter', // This set a CSS variable for the font, so we don't need to set it manually in the Main layout
   display: 'swap',
 });
 
 export const FONTS = {
-  default: fontPoppins,
-
-  // Headers and titles
+  default: fontPoppins, // The default font is used for <body/>, so it should be set here
   poppins: fontPoppins,
-  // header: fontPoppins,
-  // title: fontPoppins,
-  // button: fontPoppins,
-
-  // Text and body
   inter: fontInter,
-  // body: fontInter,
-  // text: fontInter,
 };
 
 export default FONTS;

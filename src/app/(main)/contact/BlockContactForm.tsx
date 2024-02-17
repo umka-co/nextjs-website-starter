@@ -7,8 +7,8 @@ const BlockContactForm = () => {
     <>
       <Typo variant="header2">Contact form</Typo>
       <Typo variant="paragraph">
-        If you have any inquiries or feedback concerning the <strong>{APP_NAME}</strong> software, please don&apos;t
-        hesitate to reach out to us. Simply complete the form below, and we&apos;ll get back to you promptly.
+        If you have any inquiries or feedback concerning the <strong>{APP_NAME}</strong>, please don&apos;t hesitate to
+        reach out to us. Simply complete the form below, and we&apos;ll get back to you promptly.
       </Typo>
       <ContactForm />
     </>

@@ -1,14 +1,16 @@
 'use client';
 import { FunctionComponent, PropsWithChildren, useCallback, useMemo, KeyboardEvent, ButtonHTMLAttributes } from 'react';
-import { FONTS } from '@/style/config';
 import {
   BUTTON_ICON_SIZE,
   BUTTON_MARGIN,
   BUTTON_VARIANT,
+  FONTS,
   ICON_COLOR_INVERTED,
   ICON_COLOR_NORMAL,
-} from '@/components/config';
-import { Icon, Link, Stack } from '@/components';
+} from '@/style';
+import Icon, { IconName } from '../Icon';
+import Link from '../Link';
+import Stack from '../Stack';
 import styles from './Button.module.css';
 
 export type ButtonVariant = 'contained' | 'outlined' | 'text' | 'icon';
@@ -16,9 +18,9 @@ export type ButtonVariant = 'contained' | 'outlined' | 'text' | 'icon';
 export interface ButtonProps extends PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement>> {
   activeClassName?: string;
   href?: string;
-  icon?: string;
-  iconLeft?: string;
-  iconRight?: string;
+  icon?: IconName;
+  iconLeft?: IconName;
+  iconRight?: IconName;
   margin?: string | number;
   spinIcon?: boolean;
   variant?: ButtonVariant;

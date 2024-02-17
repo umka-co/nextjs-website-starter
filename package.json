@@ -1,7 +1,7 @@
 {
   "name": "nextjs-website-starter",
-  "version": "0.1.1",
-  "description": "Some public website using NextJS",
+  "version": "0.3.5",
+  "description": "TODO: Some public website using NextJS",
   "private": true,
   "author": {
     "name": "Anton Karpenko",

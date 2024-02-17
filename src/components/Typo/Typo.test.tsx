@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { render, screen } from '@testing-library/react';
-import { randomText } from '../../utils/text';
+import { randomText } from '@/utils/text';
 import Typo, { TypoProps } from './Typo';
 
 /**

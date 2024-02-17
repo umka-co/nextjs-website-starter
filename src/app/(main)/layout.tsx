@@ -1,9 +1,14 @@
-import { APP_NAME, PUBLIC_URL } from '@/config';
 import { FunctionComponent, PropsWithChildren } from 'react';
 import type { Metadata, Viewport } from 'next';
+import { APP_NAME, PUBLIC_URL } from '@/config';
 import { OPEN_GRAPH_DEFAULT } from '@/app/config';
-import { FONTS } from '@/layout/fonts';
-import { Advertising, Analytics, Footer, Header, MobileOrDesktop } from '@/layout/components';
+import { FONTS } from '@/style';
+import Analytics from '@/components/Analytics';
+import Advertising from '@/components/Advertising';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import MobileOrDesktop from '@/components/MobileOrDesktop';
+import StylesInjector from '@/components/StylesInjector';
 import './main.css';
 
 export const metadata: Metadata = {
@@ -21,13 +26,15 @@ export const viewport: Viewport = {
 };
 
 /**
- * Layout for `(main)` styled pages, renders head and body tags
+ * Layout for `(main)` styled pages, renders head and body tags.
+ * Applies colors and font(s) to the global CSS variables.
  * @layout Main
  */
-const StyledLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
+const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <head>
+        <StylesInjector />
         <Analytics />
         <Advertising />
       </head>
@@ -38,11 +45,11 @@ const StyledLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
         <Footer />
 
         <MobileOrDesktop
-        // Remove this injector if you don't use selectors .onMobile and .onDesktop in CSS styles
+        // TODO: Remove this injector if you don't use .isMobile and .isDesktop classes in your CSS styles
         />
       </body>
     </>
   );
 };
 
-export default StyledLayout;
+export default MainLayout;

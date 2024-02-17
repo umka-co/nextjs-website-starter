@@ -16,14 +16,12 @@
 
   text-transform: capitalize;
 }
-
-.button:hover {
-  text-decoration: none;
-}
-
 .button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.button:hover {
+  text-decoration: none;
 }
 
 /* "Spinning Icon" animation */
@@ -44,43 +42,42 @@
 
 /* Variant "contained"  */
 .contained {
-  border: solid 0.125rem rgba(255, 85, 62, 1);
-  background-color: rgb(255, 85, 62);
-  color: #ffffff;
+  border: solid 0.125rem color-mix(in srgb, var(--color-primary) 10%, var(--color-background));
+  background-color: var(--color-primary);
+  color: var(--color-background);
   text-decoration: none;
 }
-
 .contained:hover {
-  background-color: rgba(255, 85, 62, 0.8);
+  background-color: color-mix(in srgb, var(--color-primary) 80%, var(--color-background));
+}
+.contained:disabled {
+  background-color: var(--color-primary);
 }
 
 /* Variant "outlined" */
 .outlined {
-  border: solid 0.125rem rgb(255, 85, 62);
+  border: solid 0.125rem var(--color-primary);
   background-color: transparent;
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
   text-decoration: none;
 }
-
 .outlined:disabled,
 .outlined:hover {
-  background-color: rgba(255, 39, 10, 0.2);
+  background-color: color-mix(in srgb, var(--color-primary) 20%, var(--color-background));
 }
 
 /* Variant "text" */
 .text {
   border: none;
   background-color: transparent;
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
   padding: 0.125rem 0.5rem;
 }
-
 .text:disabled {
-  background-color: rgba(255, 39, 10, 0.1);
+  background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-background));
 }
-
 .text:hover {
-  background-color: rgba(255, 39, 10, 0.1);
+  background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-background));
   /* text-decoration: underline; */
 }
 
@@ -88,11 +85,10 @@
 .icon {
   border: none;
   background-color: transparent;
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
   padding: 0.25rem;
 }
-
 .icon:disabled,
 .icon:hover {
-  background-color: rgba(255, 39, 10, 0.1);
+  background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-background));
 }

@@ -7,7 +7,7 @@
 
 .header {
   align-items: center;
-  background-color: rgba(255, 248, 242, 0.95);
+  background-color: var(--color-headerAndFooter);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   display: flex;
@@ -57,13 +57,12 @@
 
 .menu.desktop a {
   font-size: 1.2rem;
-  /* padding: 1rem 0.5rem; */
   padding: 0.5rem 1rem;
   text-decoration: none;
 }
 
 .menu.desktop a:hover {
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
   transition: 0.3s color;
   text-decoration: none;
 }
@@ -72,8 +71,7 @@
 .menu.mobile {
   /* Const to set starting position of the Menu */
   --menu-starting-top: -50vh;
-  /* background-color: rgba(255, 255, 255, 0.95); */
-  background-color: rgba(255, 248, 242, 0.95);
+  background-color: var(--color-headerAndFooter);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   display: flex;
@@ -140,8 +138,8 @@
 
 /* Other classes, must be defined last */
 .activeLink {
-  /* LOL, there is a bug with class order in React Modules, so we use  !important :) */
-  background-color: rgba(255, 39, 10, 0.1) !important;
+  /* LOL, there is a bug with class order in React Modules, so we use !important :) */
+  background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-background)) !important;
 }
 
 .spacer {

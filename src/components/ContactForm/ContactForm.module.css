@@ -39,9 +39,9 @@
 }
 
 .form .error {
-  color: red;
+  color: var(--color-error);
 }
 
 .form .success {
-  color: green;
+  color: var(--color-success);
 }

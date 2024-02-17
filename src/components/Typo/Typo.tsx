@@ -1,7 +1,7 @@
 // 'use client';
 import { FunctionComponent, HTMLAttributes, PropsWithChildren, ReactNode, useMemo } from 'react';
-import { useOnMobile } from '@/hooks/layout';
-import { FONTS } from '@/style/config';
+import { useIsMobile } from '@/hooks/layout';
+import { FONTS } from '@/style';
 import HtmlTag from '../HtmlTag';
 import styles from './Typo.module.css';
 
@@ -78,11 +78,11 @@ const Typo: FunctionComponent<TypoProps> = ({
   uppercase,
   ...restOfProps
 }) => {
-  const onMobile = useOnMobile();
+  const isMobile = useIsMobile();
 
   const classToRender = useMemo((): string | undefined => {
     const resultAsArray = [
-      onMobile ? styles.mobile : styles.desktop,
+      isMobile ? styles.mobile : styles.desktop,
       getFontByVariant(variant),
       styles[variant],
       styles[color],
@@ -95,7 +95,7 @@ const Typo: FunctionComponent<TypoProps> = ({
     ];
     const resultAsString: string = resultAsArray.filter(Boolean).join(' ');
     return Boolean(resultAsString) ? resultAsString : undefined;
-  }, [align, bold, color, capitalize, className, onMobile, variant, underline, uppercase]);
+  }, [align, bold, color, capitalize, className, isMobile, variant, underline, uppercase]);
 
   const styleToRender = useMemo(
     () => ({

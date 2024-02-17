@@ -1,6 +1,6 @@
 'use client';
 import { FunctionComponent } from 'react';
-import { useOnMobile } from '@/hooks';
+import { useIsMobile } from '@/hooks';
 
 const VIDEOS = {
   // TODO: put all known videos here, as YouTube embed URL or other iframe source.
@@ -32,11 +32,11 @@ interface Props {
  * @param {string} [video] - variant of the video to render, default is 'default'
  */
 const Video: FunctionComponent<Props> = ({ size = '16x9', video = 'default' }) => {
-  const onMobile = useOnMobile();
-  const onNarrowScreen = useOnMobile(1024);
+  const isMobile = useIsMobile();
+  const onNarrowScreen = useIsMobile(1024);
 
   const src = VIDEOS[video];
-  const width = onMobile ? 320 : onNarrowScreen ? 560 : 720;
+  const width = isMobile ? 320 : onNarrowScreen ? 560 : 720;
   const height = width * SIZES[size].divider;
 
   return (

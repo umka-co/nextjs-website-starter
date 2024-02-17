@@ -1,5 +1,5 @@
 'use client';
-import { useOnMobile } from '@/hooks';
+import { useIsMobile } from '@/hooks';
 import { Stack } from '@/components';
 import DownloadButton from '@/components/DownloadButton';
 
@@ -8,8 +8,8 @@ import DownloadButton from '@/components/DownloadButton';
  * @component BlockDownloadButtons
  */
 const BlockDownloadButtons = () => {
-  const onMobile = useOnMobile();
-  const direction = onMobile ? 'column' : 'row';
+  const isMobile = useIsMobile();
+  const direction = isMobile ? 'column' : 'row';
   return (
     <Stack direction={direction} padding="1rem" gap="1rem">
       <DownloadButton file="exe">Download EXE</DownloadButton>

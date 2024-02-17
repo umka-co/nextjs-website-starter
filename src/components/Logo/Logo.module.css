@@ -1,13 +1,13 @@
 .logo {
   /* Same as .dark */
-  color: rgb(28, 14, 13);
+  color: var(--color-text);
   margin: 0.125rem;
   text-decoration: none;
 }
 
 .logo:hover {
   /* Same as .primary */
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .text .primary {
-  color: rgb(255, 85, 62);
+  color: var(--color-primary);
 }
 
 /* Sizes */

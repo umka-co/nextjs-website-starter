@@ -9,4 +9,5 @@ import Typo from './Typo';
 import Video from './Video';
 import Wrapper from './Wrapper';
 
+// Note: Re-export only frequently used components to avoid the mess in codebase
 export { Button, Icon, Link, Logo, Picture, SocialMedia, Stack, Typo, Video, Wrapper };

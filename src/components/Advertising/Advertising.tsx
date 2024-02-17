@@ -1,6 +1,6 @@
+import { Suspense } from 'react';
 import { IS_PRODUCTION } from '@/config';
 import GoogleAdsense from './GoogleAdsense';
-import { Suspense } from 'react';
 
 /**
  * Add supporting scripts for Google Adsense, and other advertising services.
