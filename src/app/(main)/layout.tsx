@@ -8,6 +8,7 @@ import Advertising from '@/components/Advertising';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileOrDesktop from '@/components/MobileOrDesktop';
+import StylesInjector from '@/components/StylesInjector';
 import './main.css';
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <head>
+        <StylesInjector />
         <Analytics />
         <Advertising />
       </head>

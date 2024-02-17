@@ -7,7 +7,7 @@
 :root {
   /* We will sync --color-xxx and --font-xxx values with COLORS and FONTS during the Main layout loading */
   /* Note --font-xxx values are set by Next.js fonts, see `/src/style/fonts.ts` file for details */
-  /* TODO: Better set values matching COLORS and FONTS configs here */
+  /* TODO: Better set values matching JS configs here, otherwise server side components may have wrong styles */
 
   --color-text: #222222;
   --color-background: #ffffff;
@@ -15,7 +15,7 @@
 
   --color-primary: #bf2a1d;
   --color-secondary: #404040;
-  --color-success: #008f00;
+  --color-success: #008000;
   --color-warning: #bbbb00;
   --color-error: #ff0000;
 }
