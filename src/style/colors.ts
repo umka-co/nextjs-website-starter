@@ -3,11 +3,11 @@
  */
 export const COLORS = {
   // TODO: Put your theme/style color here
-  text: '#222222', // rgb(34, 34, 34)
-  background: '#FFFFFF',
-  headerAndFooter: '#fff5ed', // rgb(255, 245, 237)
-  primary: '#BF2A1D', // rgb(191, 42, 29)
-  secondary: '#404040', // rgb(64, 64, 64)
+  text: '#222222', // Text color
+  background: '#FFFFFF', // Background color and contrast color for icons
+  headerAndFooter: '#fff5ed', // Background color for header and footer
+  primary: '#BF2A1D',
+  secondary: '#404040',
   success: '#008000',
   warning: '#bbbb00',
   error: '#ff0000',
