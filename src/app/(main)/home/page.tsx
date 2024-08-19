@@ -11,7 +11,7 @@ import Picture from '@/components/Picture';
  */
 const HomePage = () => {
   return (
-    <Wrapper tag="article">
+    <Wrapper htmlTag="article">
       <Typo variant="header1">{APP_NAME}</Typo>
       <Typo variant="paragraph">
         <strong>{APP_NAME}</strong> {'Paragraph of text. '.repeat(10)}

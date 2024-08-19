@@ -7,7 +7,7 @@ import { Link, Typo, Wrapper } from '@/components';
  */
 const TermsAndConditionsPage = () => {
   return (
-    <Wrapper tag="article">
+    <Wrapper htmlTag="article">
       <Typo variant="header1">Terms and Conditions</Typo>
 
       <Typo variant="paragraph">
@@ -29,7 +29,7 @@ const TermsAndConditionsPage = () => {
         The Owner hereby authorize you to download, view, copy, and print text and graphics documents
         (&quot;Documents&quot;) from the Site subject to the following:
       </Typo>
-      <Typo variant="list" tag="ol">
+      <Typo variant="list" htmlTag="ol">
         <li>The Documents may be used solely for personal, informational, and non-commercial purposes.</li>
         <li>Documents may not be modified or altered in any way.</li>
         <li>

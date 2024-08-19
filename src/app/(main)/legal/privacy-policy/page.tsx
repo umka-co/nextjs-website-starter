@@ -9,7 +9,7 @@ const PRIVACY_POLICY_DATE = 'TODO: 2024-01-05'; // TODO: put your date here or u
  */
 const PrivacyPolicyPage = () => {
   return (
-    <Wrapper tag="article">
+    <Wrapper htmlTag="article">
       <Typo variant="header1">Privacy Policy</Typo>
 
       <Typo variant="header2">What information do we collect?</Typo>

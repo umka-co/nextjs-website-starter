@@ -8,10 +8,10 @@ export interface StackProps extends PropsWithChildren<HTMLAttributes<HTMLDivElem
   alignSelf?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
   direction?: 'row' | 'column' | 'column-reverse' | 'row-reverse';
   gap?: number | string;
+  htmlTag?: keyof JSX.IntrinsicElements;
   justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch';
   margin?: number | string;
   padding?: number | string;
-  tag?: keyof JSX.IntrinsicElements;
 }
 
 /**
@@ -21,6 +21,7 @@ export interface StackProps extends PropsWithChildren<HTMLAttributes<HTMLDivElem
  * @param {string} [alignSelf] - align-self CSS property
  * @param {string} [direction] - row, column or reversed, defaults to 'column'
  * @param {number | string} [gap] - controls space between children elements
+ * @param {string} [htmlTag] - HTML tag to render, defaults to 'div'
  * @param {string} [justifyContent] - justify-content CSS property
  * @param {number | string} [margin] - margin around the container
  * @param {number | string} [padding] - padding inside the container
@@ -33,11 +34,11 @@ export const Stack: FunctionComponent<StackProps> = ({
   className,
   direction = 'column',
   gap,
+  htmlTag = 'div',
   justifyContent,
   margin,
   padding,
   style,
-  tag = 'div',
   ...restOfProps
 }) => {
   const classToRender = useMemo(
@@ -62,7 +63,7 @@ export const Stack: FunctionComponent<StackProps> = ({
   }, [alignContent, alignItems, alignSelf, gap, justifyContent, margin, padding, style]);
 
   return (
-    <HtmlTag className={classToRender} tag={tag} style={styleToRender} {...restOfProps}>
+    <HtmlTag className={classToRender} tag={htmlTag} style={styleToRender} {...restOfProps}>
       {children}
     </HtmlTag>
   );

@@ -1,7 +1,7 @@
 'use client';
 import { FormEvent, useState } from 'react';
 import emailjs, { isEmailJsInitialized } from '@/lib/emailjs';
-import Button from '../Button';
+import Button from '../common/Button';
 import styles from './ContactForm.module.css';
 
 /**

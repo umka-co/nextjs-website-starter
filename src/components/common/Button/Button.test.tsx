@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { randomText } from '@/utils/text';
 import { BUTTON_MARGIN, BUTTON_VARIANT } from '@/style';
-import { ICONS } from '../Icon';
+import { ICONS } from '../../Icon';
 import Button, { ButtonVariant } from './Button';
 
 const ComponentToTest = Button;

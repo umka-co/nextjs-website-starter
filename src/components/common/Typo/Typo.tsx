@@ -1,43 +1,10 @@
-// 'use client';
+'use client';
 import { FunctionComponent, HTMLAttributes, PropsWithChildren, ReactNode, useMemo } from 'react';
 import { useIsMobile } from '@/hooks/layout';
-import { FONTS } from '@/style';
 import HtmlTag from '../HtmlTag';
+import { TypoAlign, TypoColor, TypoVariant } from './types';
+import { getFontByVariant, getTagByVariant } from './utlils';
 import styles from './Typo.module.css';
-
-type TypoColor = 'dark' | 'light' | 'primary' | 'secondary' | string;
-type TypoVariant = 'text' | 'paragraph' | 'header1' | 'header2' | 'header3' | 'list';
-type TypoAlign = 'center' | 'left' | 'right' | 'justify';
-
-function getTagByVariant(variant: TypoVariant): keyof JSX.IntrinsicElements {
-  // TODO: Synch with Figma
-  switch (variant) {
-    case 'header1':
-      return 'h1';
-    case 'header2':
-      return 'h2';
-    case 'header3':
-      return 'h3';
-    case 'paragraph':
-      return 'p';
-    case 'list':
-      return 'ul';
-    default:
-      return 'span'; // 'text' variant and any other unknown variants
-  }
-}
-
-function getFontByVariant(variant: TypoVariant): string {
-  // TODO: If we will use single font, we can remove this function
-  switch (variant) {
-    case 'header1':
-    case 'header2':
-    case 'header3':
-      return FONTS.poppins.className;
-    default:
-      return FONTS.inter.className;
-  }
-}
 
 export interface TypoProps extends PropsWithChildren<HTMLAttributes<HTMLElement>> {
   align?: TypoAlign;
@@ -46,7 +13,7 @@ export interface TypoProps extends PropsWithChildren<HTMLAttributes<HTMLElement>
   className?: string;
   children: ReactNode;
   color?: TypoColor;
-  tag?: keyof JSX.IntrinsicElements;
+  htmlTag?: keyof JSX.IntrinsicElements;
   variant?: TypoVariant;
   underline?: boolean;
   uppercase?: boolean;
@@ -73,7 +40,7 @@ const Typo: FunctionComponent<TypoProps> = ({
   color = 'dark',
   style,
   variant = 'text',
-  tag = getTagByVariant(variant), // Must be defined after .variant property!!!
+  htmlTag = getTagByVariant(variant), // Must be defined after .variant property!!!
   underline,
   uppercase,
   ...restOfProps
@@ -106,7 +73,7 @@ const Typo: FunctionComponent<TypoProps> = ({
   );
 
   return (
-    <HtmlTag className={classToRender} style={styleToRender} tag={tag} {...restOfProps}>
+    <HtmlTag className={classToRender} style={styleToRender} tag={htmlTag} {...restOfProps}>
       {children}
     </HtmlTag>
   );

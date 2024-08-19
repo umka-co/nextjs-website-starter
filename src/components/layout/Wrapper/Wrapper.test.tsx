@@ -62,12 +62,12 @@ describe('<Wrapper/> component', () => {
     expect(element).toBeDefined();
     expect(element.tagName.toLowerCase()).toBe('div');
 
-    const tagsToVerify: WrapperProps['tag'][] = ['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    const tagsToVerify: WrapperProps['htmlTag'][] = ['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
     for (const tag of tagsToVerify) {
       text = `property .tag is ${tag}`;
       testId = randomText(8);
       render(
-        <ComponentToTest data-testid={testId} tag={tag}>
+        <ComponentToTest data-testid={testId} htmlTag={tag}>
           {text}
         </ComponentToTest>
       );

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import mockRouter from 'next-router-mock';
 import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
-import { randomText } from '../../utils';
+import { randomText } from '../../../utils';
 import Link, { LinkProps } from './Link';
 /* IMPORTANT! To get 'next/router' working with tests, add into "jest.setup.js/ts" file following:
 ---

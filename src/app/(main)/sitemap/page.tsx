@@ -17,7 +17,7 @@ const SitemapPage = async () => {
   // });
 
   return (
-    <Wrapper tag="article">
+    <Wrapper htmlTag="article">
       <Typo variant="header1">Sitemap</Typo>
       <Typo variant="list">
         <li>

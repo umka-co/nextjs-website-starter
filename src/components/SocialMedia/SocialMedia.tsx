@@ -2,8 +2,8 @@ import { FunctionComponent } from 'react';
 import { APP_NAME } from '@/config';
 import { ObjectPropByName } from '@/utils';
 import { IconName } from '../Icon';
-import Button from '../Button';
-import Stack, { StackProps } from '../Stack/Stack';
+import Button from '../common/Button';
+import Stack, { StackProps } from '../common/Stack/Stack';
 
 // TODO: put all known social media links here
 export const SOCIAL_MEDIA: ObjectPropByName = {

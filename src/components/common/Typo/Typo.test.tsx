@@ -43,12 +43,12 @@ describe('<Typo/> component', () => {
     expect(element).toBeDefined();
     expect(element.tagName.toLowerCase()).toBe('span');
 
-    const tagsToVerify: TypoProps['tag'][] = ['div', 'span', 'p', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    const tagsToVerify: TypoProps['htmlTag'][] = ['div', 'span', 'p', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
     for (const tag of tagsToVerify) {
       text = `property .tag is ${tag}`;
       testId = randomText(8);
       render(
-        <ComponentToTest data-testid={testId} tag={tag}>
+        <ComponentToTest data-testid={testId} htmlTag={tag}>
           {text}
         </ComponentToTest>
       );

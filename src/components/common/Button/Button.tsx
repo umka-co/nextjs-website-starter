@@ -8,7 +8,7 @@ import {
   ICON_COLOR_INVERTED,
   ICON_COLOR_NORMAL,
 } from '@/style';
-import Icon, { IconName } from '../Icon';
+import Icon, { IconName } from '../../Icon';
 import Link from '../Link';
 import Stack from '../Stack';
 import styles from './Button.module.css';

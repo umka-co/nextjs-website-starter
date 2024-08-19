@@ -2,8 +2,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useIsMobile } from '@/hooks';
 import { IS_BROWSER } from '@/utils';
-import Button from '../Button';
-import Logo from '../Logo';
+import Button from '../../common/Button';
+import Logo from '../../Logo';
 import TopMenuContent from './TopMenuContent';
 import styles from './Header.module.css';
 

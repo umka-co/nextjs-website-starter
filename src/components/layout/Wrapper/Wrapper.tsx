@@ -1,26 +1,26 @@
 import { FunctionComponent, HTMLAttributes, PropsWithChildren, useMemo } from 'react';
-import HtmlTag from '../HtmlTag';
+import HtmlTag from '../../common/HtmlTag';
 import styles from './Wrapper.module.css';
 
 export interface WrapperProps extends PropsWithChildren<HTMLAttributes<HTMLElement>> {
   fullWidth?: boolean;
-  tag?: keyof JSX.IntrinsicElements;
+  htmlTag?: keyof JSX.IntrinsicElements;
   width?: number | string;
 }
 
 /**
  * Multifunctional "wrapper" component to make content restricted by width
  * @component Wrapper
- * @prop {boolean} [fullWidth] - if true, wrapper will be 100% width
- * @prop {string} [tag] - HTML tag to render
- * @prop {number} [width] - .width style override
+ * @param {boolean} [fullWidth] - if true, wrapper will be 100% width
+ * @param {string} [htmlTag] - HTML tag to render
+ * @param {number} [width] - .width style override
  */
 const Wrapper: FunctionComponent<WrapperProps> = ({
   className,
   children,
   fullWidth,
+  htmlTag = 'div',
   style,
-  tag = 'div',
   width,
   ...restOfProps
 }) => {
@@ -35,7 +35,7 @@ const Wrapper: FunctionComponent<WrapperProps> = ({
   }, [width, style]);
 
   return (
-    <HtmlTag tag={tag} className={classToRender} style={styleToRender} {...restOfProps}>
+    <HtmlTag tag={htmlTag} className={classToRender} style={styleToRender} {...restOfProps}>
       {children}
     </HtmlTag>
   );
