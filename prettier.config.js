@@ -1,4 +1,8 @@
-module.exports = {
+/**
+ * @see https://prettier.io/docs/en/configuration.html
+ * @type {import("prettier").Config}
+ */
+const configPrettier = {
   printWidth: 120, // max 120 chars in line, code is easy to read
   useTabs: false, // use spaces instead of tabs
   tabWidth: 2, // "visual width" of of the "tab"
@@ -8,6 +12,8 @@ module.exports = {
   bracketSpacing: true, // import { some } ... instead of import {some} ...
   arrowParens: 'always', // braces even for single param in arrow functions (a) => { }
   jsxSingleQuote: false, // "" for react props, like in html
-  jsxBracketSameLine: false, // pretty JSX
+  bracketSameLine: false, // pretty JSX
   endOfLine: 'lf', // 'lf' for linux, 'crlf' for windows, we need to use 'lf' for git
 };
+
+module.exports = configPrettier;

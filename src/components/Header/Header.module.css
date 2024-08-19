@@ -12,7 +12,7 @@
   backdrop-filter: blur(3px);
   display: flex;
   flex-direction: row;
-  height: 6rem; /* 96px; */
+  height: 6rem; /* 96px;  Must be same as HEIGHT_SMALL const */
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
@@ -33,12 +33,12 @@
 
 .header.desktop.big {
   /* Full-size Header on Desktop */
-  height: 12rem; /* 192px; */
+  height: 12rem; /* 192px; Must be same as HEIGHT_BIG const */
 }
 
 .header.desktop.small {
   /* Shrinked Header after scrolling on Desktop */
-  height: 6rem; /* 96px; */
+  height: 6rem; /* 96px; Must be same as HEIGHT_SMALL const */
 }
 
 /* "Static" Menu on Desktop */

@@ -7,6 +7,10 @@ import Logo from '../Logo';
 import TopMenuContent from './TopMenuContent';
 import styles from './Header.module.css';
 
+// TODO: Animation of header is cool, but brakes the Web Vitals rules. So enable it on the own risk.
+const RESIZE_HEADER_ON_SCROLL_AND_LOADING = true; // When "true" the header will be resized on scroll and loading
+
+// Note: Sync values with "Header.module.css"
 const HEIGHT_BIG = 192;
 const HEIGHT_SMALL = 96;
 
@@ -17,8 +21,12 @@ const HEIGHT_SMALL = 96;
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [small, setSmall] = useState(
-    (global?.window && window?.scrollY) || (global?.document && document?.documentElement?.scrollTop) > HEIGHT_BIG
+    !RESIZE_HEADER_ON_SCROLL_AND_LOADING ||
+      (global?.window && window?.scrollY) || // Scrolling is already in progress
+      (global?.document && document?.documentElement?.scrollTop) > HEIGHT_BIG // Content is scrolled down for more than "HEIGHT_BIG"
   );
+
+  console.log('Header: small', small);
   const isMobile = useIsMobile();
   const isNarrowScreen = useIsMobile(1024);
 
@@ -35,25 +43,25 @@ const Header = () => {
       const scrollDistance = window?.scrollY || document?.documentElement?.scrollTop;
       // Variant 1
       // if (scrollDistance > HEIGHT_BIG) {
-      //   setSmall(true);
+      //   RESIZE_HEADER_ON_SCROLL && setSmall(true);
       // }
       // // if (scrollDistance < HEIGHT_SMALL) {
-      //   setSmall(false);
+      //   RESIZE_HEADER_ON_SCROLL && setSmall(false);
       // }
 
       // Variant 2
       if (scrollDistance > HEIGHT_SMALL) {
-        setSmall(true);
+        RESIZE_HEADER_ON_SCROLL_AND_LOADING && setSmall(true);
       }
       if (scrollDistance <= 0) {
-        setSmall(false);
+        RESIZE_HEADER_ON_SCROLL_AND_LOADING && setSmall(false);
       }
     };
-    if (IS_BROWSER) {
+    if (RESIZE_HEADER_ON_SCROLL_AND_LOADING && IS_BROWSER) {
       window.addEventListener('scroll', onScroll, true);
     }
     return () => {
-      if (IS_BROWSER) {
+      if (RESIZE_HEADER_ON_SCROLL_AND_LOADING && IS_BROWSER) {
         window.removeEventListener('scroll', onScroll);
       }
     };
