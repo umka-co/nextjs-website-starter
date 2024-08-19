@@ -103,7 +103,6 @@ const Header = () => {
           </>
         ) : (
           <nav className={classMenu}>
-            {' '}
             <TopMenuContent activeClassName={styles.activeLink} />{' '}
           </nav>
         )}
