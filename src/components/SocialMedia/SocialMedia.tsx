@@ -5,8 +5,13 @@ import { IconName } from '../Icon';
 import Button from '../common/Button';
 import Stack, { StackProps } from '../common/Stack/Stack';
 
+type SocialLink = {
+  href: string;
+  title: string;
+};
+
 // TODO: put all known social media links here
-export const SOCIAL_MEDIA: ObjectPropByName = {
+export const SOCIAL_MEDIA: ObjectPropByName<SocialLink> = {
   facebook: {
     href: 'https://www.facebook.com/TODO_xxx',
     title: `Follow ${APP_NAME} on Facebook`,

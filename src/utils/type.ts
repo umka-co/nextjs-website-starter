@@ -1,5 +1,5 @@
 // Helper to read object's properties as obj['name']
-export type ObjectPropByName = Record<string, unknown>;
+export type ObjectPropByName<T = unknown> = Record<string, T>;
 
 // Props for Pictures, Screenshots, etc.
 export interface PictureProps extends Partial<HTMLImageElement> {
