@@ -1,6 +1,7 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     "import/no-cycle": "error"
-  }
+  },
+  "ignorePatterns": ["node_modules", "/**/*.test.*", "/**/*.spec.*"]
 }

@@ -7,7 +7,7 @@ import { Link, Typo, Wrapper } from '@/components';
  */
 const LegalPage = () => {
   return (
-    <Wrapper tag="article">
+    <Wrapper htmlTag="article">
       <Typo variant="header1">Legal Documents</Typo>
       <Typo variant="list">
         <li>

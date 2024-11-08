@@ -2,7 +2,7 @@
 import { FunctionComponent } from 'react';
 import { gaPageView } from '@/lib/ga';
 import { APP_NAME } from '@/config';
-import Button, { ButtonProps } from '../Button/Button';
+import Button, { ButtonProps } from '../common/Button/Button';
 
 const LOCAL_FILES = {
   exe: '/files/_TODO_PRODUCT_INSTALLER_.exe',

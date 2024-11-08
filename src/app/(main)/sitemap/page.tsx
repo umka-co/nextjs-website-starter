@@ -2,10 +2,10 @@ import { APP_NAME, PUBLIC_URL } from '@/config';
 import { Link, Typo, Wrapper } from '@/components';
 // import { articleToTitle, articleToUrl, getArticleList } from '../article/utils';
 
-interface LinkData {
-  url: string;
-  title: string;
-}
+// interface LinkData {
+//   url: string;
+//   title: string;
+// }
 
 /**
  * Content of the "Sitemap" page. This is page is not `sitemap.xml`, but a page for humans.
@@ -17,7 +17,7 @@ const SitemapPage = async () => {
   // });
 
   return (
-    <Wrapper tag="article">
+    <Wrapper htmlTag="article">
       <Typo variant="header1">Sitemap</Typo>
       <Typo variant="list">
         <li>

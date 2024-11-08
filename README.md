@@ -6,7 +6,7 @@ Mix of [Create Next App](https://nextjs.org/docs/pages/api-reference/create-next
 
 1. Clone the repository
 2. Run `npm i` to install all dependencies
-3. Copy `.env.sample` to `.env` or `.env.local` and set all required environment variables
+3. Copy `.env.example` to `.env` or `.env.local` and set all required environment variables
 4. Find all `TODO:` in the code and follow the instructions
 5. Run `npm run dev` to start the development server
 6. Add your own pages to the `/src/app` folder

@@ -1,6 +1,6 @@
 import { FunctionComponent, HTMLAttributes, useMemo } from 'react';
 import Image from 'next/image';
-import Link from '../Link';
+import Link from '../common/Link';
 import styles from './Logo.module.css';
 
 type LogoSize = 'small' | 'medium' | 'large';

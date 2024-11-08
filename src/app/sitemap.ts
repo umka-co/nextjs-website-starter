@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import { PUBLIC_URL } from '@/config';
 // import { articleToUrl, getArticleList } from './(main)/article/utils';
 
+export const dynamic = 'force-static'; // Required by Next.js v 15+ for static builds
+
 async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const currentDate = new Date().toISOString();
   const lastModified = currentDate.substring(0, currentDate.indexOf('T'));

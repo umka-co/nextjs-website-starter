@@ -11,7 +11,7 @@ import Picture from '@/components/Picture';
  */
 const HomePage = () => {
   return (
-    <Wrapper tag="article">
+    <Wrapper htmlTag="article">
       <Typo variant="header1">{APP_NAME}</Typo>
       <Typo variant="paragraph">
         <strong>{APP_NAME}</strong> {'Paragraph of text. '.repeat(10)}
@@ -75,8 +75,6 @@ const HomePage = () => {
         <Picture src="/img/favicon/256x256.png" width={256} height={256} />
         <Picture variant="second" />
       </Stack>
-
-      <Typo variant="paragraph">{'Another paragraph of text. '.repeat(10)}</Typo>
 
       <Typo variant="header1">Video</Typo>
       <Stack alignItems="center" padding="1rem 0">

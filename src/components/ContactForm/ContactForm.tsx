@@ -1,7 +1,7 @@
 'use client';
 import { FormEvent, useState } from 'react';
 import emailjs, { isEmailJsInitialized } from '@/lib/emailjs';
-import Button from '../Button';
+import Button from '../common/Button';
 import styles from './ContactForm.module.css';
 
 /**
@@ -55,7 +55,7 @@ const ContactForm = () => {
       setEmailSent(true);
     } catch (error) {
       console.error(error);
-      const errorMessage: string = (error as Error).message || (error as any).text;
+      const errorMessage: string = (error as Error).message || (error as { text: string }).text;
       setError(errorMessage);
     } finally {
       setIsSubmitting(false);

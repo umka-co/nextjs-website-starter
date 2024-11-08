@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 import Image, { ImageProps } from 'next/image';
 import { useIsMobile } from '@/hooks';
 import { PictureProps } from '@/utils';
-import Link from '../Link';
+import Link from '../common/Link';
 import { PICTURES, PICTURE_MULTIPLIER_DESKTOP, PICTURE_MULTIPLIER_MOBILE } from './config';
 
 interface Props extends Partial<ImageProps> {

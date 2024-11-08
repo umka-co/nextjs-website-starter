@@ -3,12 +3,12 @@ import type { Metadata, Viewport } from 'next';
 import { APP_NAME, PUBLIC_URL } from '@/config';
 import { OPEN_GRAPH_DEFAULT } from '@/app/config';
 import { FONTS } from '@/style';
-import Analytics from '@/components/Analytics';
-import Advertising from '@/components/Advertising';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import MobileOrDesktop from '@/components/MobileOrDesktop';
-import StylesInjector from '@/components/StylesInjector';
+import Analytics from '@/components/tooling/Analytics';
+import Advertising from '@/components/tooling/Advertising';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import MobileOrDesktop from '@/components/tooling/MobileOrDesktop';
+import StylesInjector from '@/components/tooling/StylesInjector';
 import './main.css';
 
 export const metadata: Metadata = {
