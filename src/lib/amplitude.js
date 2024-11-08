@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import * as amplitude from '@amplitude/analytics-browser';
 import { IS_BROWSER } from '@/utils';
 import { IS_DEBUG, IS_PRODUCTION } from '@/config';

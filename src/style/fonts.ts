@@ -1,3 +1,6 @@
+/**
+ * Fonts using standard NextJS font management.
+ */
 import { Inter, Poppins } from 'next/font/google';
 
 // Font 1

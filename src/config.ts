@@ -1,4 +1,4 @@
-import { envRequired, getCurrentEnvironment } from '@/utils/environment';
+import { getCurrentEnvironment } from '@/utils/environment';
 
 export const IS_DEBUG = process.env.NEXT_PUBLIC_DEBUG === 'true'; // Enables logging, etc.
 

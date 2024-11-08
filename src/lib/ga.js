@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { IS_DEBUG } from '@/config';
 
 export const GA_ID = process.env.NEXT_PUBLIC_GA_ID;

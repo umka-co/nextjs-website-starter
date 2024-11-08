@@ -1,4 +1,3 @@
-import { ComponentType } from 'react';
 import IconNotFound from './icons/IconNotFound';
 import { AiOutlineCloseSquare, AiOutlineMenu } from 'react-icons/ai';
 import { BsFillArrowRightCircleFill, BsPatchCheck } from 'react-icons/bs';

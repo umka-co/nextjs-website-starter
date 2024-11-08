@@ -51,10 +51,14 @@ const Header = () => {
 
       // Variant 2
       if (scrollDistance > HEIGHT_SMALL) {
-        RESIZE_HEADER_ON_SCROLL_AND_LOADING && setSmall(true);
+        if (RESIZE_HEADER_ON_SCROLL_AND_LOADING) {
+          setSmall(true);
+        }
       }
       if (scrollDistance <= 0) {
-        RESIZE_HEADER_ON_SCROLL_AND_LOADING && setSmall(false);
+        if (RESIZE_HEADER_ON_SCROLL_AND_LOADING) {
+          setSmall(false);
+        }
       }
     };
     if (RESIZE_HEADER_ON_SCROLL_AND_LOADING && IS_BROWSER) {

@@ -55,7 +55,7 @@ const ContactForm = () => {
       setEmailSent(true);
     } catch (error) {
       console.error(error);
-      const errorMessage: string = (error as Error).message || (error as any).text;
+      const errorMessage: string = (error as Error).message || (error as { text: string }).text;
       setError(errorMessage);
     } finally {
       setIsSubmitting(false);
